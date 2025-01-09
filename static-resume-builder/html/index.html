@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>website-builder</title>
+    
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+
+       body{
+        background-color:  rgb(19, 19, 165);
+        color: whitesmoke;
+        padding: 2rem;
+       }
+
+       p{
+        font-size: 0.9rem;
+       }
+    </style>
+</head>
+<body>
+
+<!--intro section-->
+<div style="display: flex; justify-content: center;">
+<div class="width" style="flex-wrap: nowrap; width: 80%;">
+    <div class="parent" style="display: flex; width: fit-content; background-color: black; box-shadow: 0 19px 32px rgba(0, 0, 0, 0.9);">
+    <div class="bg-color" style="background-color: rgb(19, 18, 18); padding: 2rem; margin: 6rem;width: 60%;">
+    <div class="intro-section" style=" display: flex; flex-direction: column; text-align: justify">
+    <h1 id="name" style="font-size: 2rem; color: whitesmoke; margin-top: 1rem; margin-bottom: 1rem;">Ali Arain</h1>
+
+    <div>
+    <p class="bgc-blue"><strong style="font-size: 1.2rem;">I am a Frontend Developer</strong> </p>
+
+    <p class="color-white">
+      <p style=" margin-top: 1rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eos eligendi esse, sint vitae nihil aut quia in ratione quo molestias, fuga numquam commodi deserunt ut quasi voluptate obcaecati quod"</p> 
+    </p>
+    </div>
+
+    <div>
+        <div class="h4-margin">
+        <h4 style="margin-top: 1rem;">Date Of Brith</h4>
+        <p>29/04/2006</p>
+        </div>
+
+        <div class="h4-margin">
+        <h4 style="margin-top: 1rem;">Address</h4>
+        <p>1234 street road city Name ,<br>uk 529 867</p>
+        </div> 
+        
+        <div class="h4-margin">
+            <h4 style="margin-top: 1rem;">Phone</h4>
+            <p>1111-1111-111</p>
+        </div>
+
+        <div class="h4-margin">
+            <h4 style="margin-top: 1rem;">Email</h4>
+            <p>Example@gmail.com</p>
+        </div>
+
+        <div class="h4-margin">
+            <h4 style="margin-top: 1rem;">Website</h4>
+            <p>www.example.com</p>
+        </div>
+    </div>
+
+    <div>
+        <h3 class="h3" style="margin-top: 1rem;">About Me</h3>
+        <p class="color-white">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam ab ipsum nemo magnam maiores. Quas quaerat sequi architecto fugiat impedit. Reiciendis commodi sit temporibus eum. Laudantium iusto tempora necessitatibus numquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, voluptatem.</p>
+        </p>
+    </div>
+</div>
+</div>
+
+<!--intro section end-->
+
+<!--profile section start-->
+<div class="profile-parent">
+  <div class="right" style="display: flex; justify-content: flex-end;">
+    <div class="square" style="width: 300px; height: 200; background-color: graay; margin: 1rem; border-radius: 10px;">
+      <img src="/images/blocks.png" alt="profile-pictures" id="profilePic" height="200" width="300" style="width: 300; height: 200px; border-radius: 5px;">
+      <div class="upload-img" style="display: flex; justify-content: center; align-items: center; margin-top: 1rem;">
+        <div style="margin-top: 0.5rem;">
+          <label for="inputFile" id="upload-pic" style="background-color: gray; padding: 0.6rem;
+          padding-left: 1.5rem; padding-right: 1.5rem; border-radius: 3px;">upload image</label>
+          <input type="file" accept="image/jpeg, image/jpg, image/png" id="inputFile" style="display: none;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const profilePic = document.getElementById("profilePic");
+    const inputFile = document.getElementById("inputFile");
+
+    if (profilePic && inputFile) {
+      inputFile.onchange = function () {
+        if (inputFile.files && inputFile.files[0]) {
+          profilePic.src = URL.createObjectURL(inputFile.files[0]);
+        }
+      };
+    }
+  </script>
+
+  <div>
+    <h3 class="white" id="edu" style="font-size: 1.5rem;">EDUCATION</h3>
+  </div>
+
+  <div class="project-manager" style="display: flex; justify-content: space-around;">
+
+    <div class="edu-para" style="padding: 1rem;">
+      <p type="text" class="project" style="color: blue; font-weight: 600;margin-top: 0.5rem;font-size: 1.3rem;">FSC from</p>
+      <p type="text" class="h5" style="margin-top: 0.5rem; font-size: 1rem;">Passing year 2022-2023</p>
+      <p type="text" class="edu-project-p" style="margin-top: 0.5rem;">Allhamdullilah I had passed my FSC with heighest score and gain a lot of knowledge from that journey</p>
+    </div>
+    
+    <div class="edu-para" style="padding: 1rem;">
+      <p type="text" class="project" style="color: blue; font-weight: 600;margin-top: 0.5rem;font-size: 1.3rem;">Graduation from</p>
+      <p type="text" class="h5" style="margin-top: 0.5rem; font-size: 1rem;">Passing year 2022-2023</p>
+      <p type="text" class="edu-project-p" style="margin-top: 0.5rem;">Allhamdullilah I had passed my Graduation with heighest score and gain a lot of knowledge from that journey</p>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="white" id="exp" style="margin-top: 2rem; font-size: 1.5rem;">EXPERIENCE</h3>
+  </div>
+
+  <div class="edu-para" style="padding: 1rem;">
+    <p type="text" class="project" style="color: blue; font-weight: 600; margin-top: 0.8rem;">PROJECT MANAGER</p>
+    <p type="text" class="h5" style="margin-top: 0.5rem;">2019 to 2022</p>
+    <p type="text" class="edu-project-p" style="margin-top: 0.5rem;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit autem eius..</p>
+  </div>
+
+  <div class="edu-para" style="padding: 1rem;">
+    <p type="text" class="project" style="color: blue; font-weight: 600;">PROJECT MANAGER</p>
+    <p type="text" class="h5" style="margin-top: 0.5rem;">2019 to 2022</p>
+    <p type="text" class="edu-project-p" style="margin-top: 0.5rem;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit autem eius..</p>
+  </div>
+
+  <div class="edu-para" style="padding: 1rem;">
+    <p type="text" class="project" style="color: blue; font-weight: 600;">PROJECT MANAGER</p>
+    <p type="text" class="h5" style="margin-top: 0.5rem;">2019 to 2022</p>
+    <p type="text" class="edu-project-p" style="margin-top: 0.5rem;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit autem eius..</p>
+  </div>
+
+  <div>
+    <h4 id="my-skill" style="font-size: 1.2rem;">MY SKILLS</h4>
+  </div>
+
+  <div class="img-display" style="display: flex;">
+    <div class="html">
+      <img src="/images/html-5.png" alt="html-icon" height="70" width="auto">
+    </div>
+
+    <div class="html">
+      <img src="/images/css-3.png" alt="css-icon" height="70" width="auto">
+    </div>
+
+    <div class="html">
+      <img src="/images/typescript.png" alt="typescript-icon" height="70" width="auto">
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<script src="/script.js"></script>
+</body>
+</html>
